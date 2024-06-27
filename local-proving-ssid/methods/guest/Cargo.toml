@@ -1,0 +1,11 @@
+[package]
+name = "ssid-adult-check"
+version = "0.1.0"
+edition = "2021"
+
+[workspace]
+
+[dependencies]
+ssid-core = { path = "../../core" }
+risc0-zkvm = { version = "1.0", default-features = false, features = ["std"] }
+chrono = { version = "0.4", default-features = false, features = ["serde"] }

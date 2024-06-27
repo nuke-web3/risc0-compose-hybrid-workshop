@@ -1,0 +1,17 @@
+[package]
+name = "ssid-adult-check"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+ssid-core = { path = "core" }
+ssid-methods = { path = "methods" }
+risc0-zkvm = "1.0.1"
+chrono = { version = "0.4", default-features = false, features = ["serde", "now"] }
+clap = { version = "4.0", features = ["derive"] }
+
+[features]
+cuda = ["risc0-zkvm/cuda"]
+default = []
+metal = ["risc0-zkvm/metal"]
+prove = ["risc0-zkvm/prove"]
